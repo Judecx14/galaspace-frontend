@@ -101,7 +101,7 @@ export class CreatePostComponent implements OnInit {
 
   createPostWithImage(): void {
     if (this.image != null) {
-      this.imageForm.append('file', this.image != null ? this.image : '');
+      this.imageForm.append("file", this.image);
       this.postService
         .uploadImage(this.imageForm)
         .subscribe((response: any) => {

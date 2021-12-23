@@ -24,9 +24,6 @@ export class TokenInterceptor implements HttpInterceptor {
     let _request = request;
     if (token) {
       _request = request.clone({
-        setHeaders: {
-          authorization: `Bearer ${token}`
-        },
         setParams: {
           auth: token,
         }
